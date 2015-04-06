@@ -101,4 +101,4 @@ install(TARGETS ${GD_LIB} ${GD_LIB_STATIC}
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib)
 #install(PROGRAMS bdftogd DESTINATION bin)
-install(FILES gd.h gdfx.h gd_io.h gdcache.h gdfontg.h gdfontl.h gdfontmb.h gdfonts.h gdfontt.h gd_color_map.h gd_errors.h DESTINATION include)
+install(FILES gd.h gdfx.h gd_io.h gdcache.h gdfontg.h gdfontl.h gdfontmb.h gdfonts.h gdfontt.h gd_color_map.h gd_errors.h DESTINATION include/gd)
