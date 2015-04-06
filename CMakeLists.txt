@@ -221,9 +221,9 @@ else (USE_EXT_GD)
 	add_subdirectory(src)
 endif (USE_EXT_GD)
 
-add_subdirectory(tests)
-add_subdirectory(examples)
-add_subdirectory(docs)
+#add_subdirectory(tests)
+#add_subdirectory(examples)
+#add_subdirectory(docs)
 
 SET(CPACK_PACKAGE_NAME "libgd")
 SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "libGD, powerful and easy to use graphic library")
