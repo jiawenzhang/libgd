@@ -89,15 +89,16 @@ INCLUDE_DIRECTORIES(BEFORE "${PROJECT_BINARY_DIR}" "${CMAKE_BINARY_DIR}" "${GD_S
 target_link_libraries(${GD_LIB} ${ZLIB_LIBRARIES} ${FREETYPE_LIBRARIES} ${PNG_LIBRARIES} ${ICONV_LIBRARIES} ${LIQ_LIBRARIES} ${JPEG_LIBRARIES} ${TIFF_LIBRARIES} ${XPM_LIBRARIES} ${FONTCONFIG_LIBRARY} ${VPX_LIBRARIES})
 target_link_libraries(${GD_LIB_STATIC} ${ZLIB_LIBRARIES} ${FREETYPE_LIBRARIES} ${PNG_LIBRARIES} ${ICONV_LIBRARIES} ${LIQ_LIBRARIES} ${JPEG_LIBRARIES} ${TIFF_LIBRARIES} ${XPM_LIBRARIES} ${FONTCONFIG_LIBRARY} ${VPX_LIBRARIES} )
 
-set(GD_PROGRAMS annotate gdparttopng gdtopng gd2copypal gd2topng pngtogd pngtogd2 webpng gd2togif gdcmpgif giftogd2)
-foreach(program ${GD_PROGRAMS})
-    add_executable(${program} ${program}.c)
-    target_link_libraries(${program} ${GD_LIB})
-endforeach(program)
+#set(GD_PROGRAMS annotate gdparttopng gdtopng gd2copypal gd2topng pngtogd pngtogd2 webpng gd2togif gdcmpgif giftogd2)
+#foreach(program ${GD_PROGRAMS})
+#    add_executable(${program} ${program}.c)
+#    target_link_libraries(${program} ${GD_LIB})
+#endforeach(program)
 
-install(TARGETS ${GD_LIB} ${GD_LIB_STATIC} ${GD_PROGRAMS}
+#install(TARGETS ${GD_LIB} ${GD_LIB_STATIC} ${GD_PROGRAMS}
+install(TARGETS ${GD_LIB} ${GD_LIB_STATIC}
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib)
-install(PROGRAMS bdftogd DESTINATION bin)
+#install(PROGRAMS bdftogd DESTINATION bin)
 install(FILES gd.h gdfx.h gd_io.h gdcache.h gdfontg.h gdfontl.h gdfontmb.h gdfonts.h gdfontt.h gd_color_map.h gd_errors.h DESTINATION include)
