@@ -208,7 +208,7 @@ else (USE_EXT_GD)
 		SET(GD_LIB gd)
 	endif (WIN32)
 
-	SET(GD_LIB_STATIC "${GD_LIB}_static")
+	#SET(GD_LIB_STATIC "${GD_LIB}_static")
 
 	IF(PROFILE)
 		add_definitions("-pg")
@@ -240,7 +240,7 @@ endif(WIN32)
 
 IF (ENABLE_LIQ AND LIQ_BUILD)
     ADD_DEPENDENCIES(${GD_LIB} libimagequant)
-    ADD_DEPENDENCIES(${GD_LIB_STATIC} libimagequant)
+    #ADD_DEPENDENCIES(${GD_LIB_STATIC} libimagequant)
 ENDIF(ENABLE_LIQ AND LIQ_BUILD)
 
 
